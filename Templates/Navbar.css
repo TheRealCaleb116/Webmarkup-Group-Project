@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+#logo{
+    width: 100%;
+    max-width: 1000px;
+    
+}
+
+nav{
+    display: block;
+    position: absolute;
+    width: 100%;
+    background-color: red;
+    left: 0px;
+}
+
+#navStickied{
+    position: fixed;
+    top: 0px;
+    
+}
+
+nav ul{
+    width 80%;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+nav li{
+    text-align:center;
+    background-color: darkred;
+    margin: 0px 10px;
+    padding: 5px;
+    flex: 0 1 200px;
+}
+
+
+/*Reset Stuff*/
+nav ul li{
+    list-style: none;
+    width: 100%;
+}
+nav a{
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-family: fantasy;
+    font-size: 25px;
+}
+
+/*temp styles*/
+
+html{
+    background-color: white;
+}
+
+body{
+    width: 80%;
+    margin: 0px auto;
+    min-width: 480px;
+    max-width: 960px;
+    background-color: bisque;
+}
