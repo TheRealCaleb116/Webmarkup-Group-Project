@@ -1,5 +1,10 @@
-var barState = false;
 
+//=======================================
+//========Sticky Nav Bar Code============
+//=======================================
+
+//Globals for stickyBar
+var barState = false;
 
 function ToggleBar(State = null){
     
@@ -51,4 +56,38 @@ window.onscroll = function(){
         ToggleBar(false);
     }
     
+}
+
+
+//=======================================
+//=========Mobile Nav Menu Code==========
+//=======================================
+
+//Gobals for Navicon
+
+var navIcon = document.getElementById("navIcon");
+
+var drop = document.getElementById("drop");
+
+var isOpen = false;
+
+//Mouse down Event On Navicon
+navIcon.onmousedown = function(){
+    //add class for click style
+    navIcon.classList.add("navIconClick");
+    
+    //Togle Dropdown Visiblity
+    if (isOpen){
+        drop.classList.add("hide");
+        isOpen = false;
+    }else{
+        drop.classList.remove("hide");
+        isOpen = true;
+    }
+}
+
+//Mouse up event on navicon
+window.onmouseup = function(){
+    //remove click styles
+    navIcon.classList.remove("navIconClick");
 }
