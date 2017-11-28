@@ -3,15 +3,7 @@
 #logo{
     width: 100%;
     max-width: 1000px; 
-    margin-bottom: -4px;
-}
-
-#navIcon{
-    color: dimgray;
-    font-family: fantasy;
-    font-size: 25px;
-    display: none;
-    margin: 0% 10%;
+    margin-bottom: -5px;
 }
 
 nav{
@@ -73,6 +65,33 @@ nav li:hover a{
     color: white;
 }
 
+/*Active*/
+nav li:active{
+    /*On Click*/
+    box-shadow: inset 0 0 10px grey;
+}
+
+
+/*Navicon*/
+#navIcon{
+    color: dimgray;
+    font-family: fantasy;
+    font-size: 25px;
+    display: none;
+    margin-left: 10%;
+    user-select: none;
+    cursor: pointer;
+        
+    width: 4.0em;
+}
+.navIconClick{
+    box-shadow: inset 0 0 10px lightgrey;
+}
+
+/*End of NavBar Styles*/
+
+
+
 /*Footer Styles*/
 footer{
     background-color: rgb(238, 238, 238);
@@ -127,6 +146,45 @@ h2{
     font-family: "Days One";
 }
 
+/*End Of Footer Styles*/
+
+
+
+@media all and (max-width: 480px){
+    /*Mobile Navbar Styles*/
+    #navIcon{
+        display: block;
+    }
+    nav ul {
+        display: block;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .hide{
+        display: none;
+    }
+    
+    /*Footer*/
+    #about{
+        float: none;
+        width: 100%;
+    }
+    #bottomNav{
+        float: none;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    body{
+        width: 100%;
+    }
+}
+
+
+
+
+
 /*Reset Stuff*/
 nav ul li{
     list-style: none;
@@ -144,31 +202,5 @@ body{
     max-width: 960px;
     background-color: bisque;
 }
-
-@media all and (max-width: 480px){
-    /*Mobile Navbar Styles*/
-    #navIcon{
-        display: block;
-    }
-    nav ul {
-        display: none;
-    }
-    
-    #about{
-        float: none;
-        width: 100%;
-    }
-    #bottomNav{
-        float: none;
-        width: 100%;
-        padding-bottom: 10px;
-    }
-    body{
-        width: 100%;
-    }
-    
-}
-
-
 
 
