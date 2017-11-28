@@ -3,30 +3,32 @@
         <meta charset="utf-8"/>
         <title>HTML fan page</title>
         <link href="../css/styles.css" rel="stylesheet"/>
-        <link href="../Code/css/reset.css" rel="stylesheet"/>
+        <link href="../css/reset.css" rel="stylesheet"/>
+        
+        <!--Nav Bar And Footer Links-->
         <link href="../css/Navbar.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Days+One" />
-
-        <script src="Navbar.js"></script>
-    
+        <script src="../js/navBar.js" defer></script>
+        
     </head>
     <body>
-        <header>
-            
-         <img id="logo" src="../Code/img/Logo.png" alt="Logo">
-        
-        <nav id="navBar">
-            <div id="navIcon">&#9776; Menu</div>
-            
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Trivia</a></li>
-                <li><a href="#">Merchendise</a></li>
-                <li><a href="#">Order</a></li>
-            </ul>
-        </nav>
-        
+        <header class="fix">
+            <img id="logo" src="../img/Logo.png" alt="Logo">
+
+            <nav id="navBar" >
+                <div id="navIcon">&#9776; Menu</div>
+
+                <ul id="drop" class="hide">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Trivia</a></li>
+                    <li><a href="#">Merchendise</a></li>
+                    <li><a href="#">Order</a></li>
+                </ul>
+            </nav>
+            <div id="spacer"></div>
+
         </header>
+        
         <main>
             <p>
                 Hypertext Markup Language (HTML) is the standard markup language for creating web pages and web applications. With Cascading Style Sheets (CSS) and JavaScript it forms a triad of cornerstone technologies for the World Wide Web.[3] Web browsers receive HTML documents from a web server or from local storage and render them into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
@@ -51,5 +53,30 @@
                 <li><a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">Forms</a></li>
             </ul> 
         </aside>
+        
+        <footer>
+            <div id="paneOne">
+                 <section id="bottomNav">
+                    <h2>Navigation:</h2>
+                    <ul>
+                        <li><a href="#">Link One</a></li>
+                        <li><a href="#">Link Two</a></li>
+                        <li><a href="#">Link Three</a></li>
+                        <li><a href="#">Link Four</a></li>
+                        <li><a href="#">Link Five</a></li>
+                    </ul>
+                </section>
+                <section id="about">
+                    <h2>About Our Site:</h2>
+                    <article>
+                        Some strange thing about stuff and things. about the site and stuff like this and yeah. So basicly this is just random text as a placeholder 
+                    </article>
+                </section>
+            </div>
+            <section id="paneTwo">
+               the best &diams; HTML FAN SITE &diams; every made
+            </section>
+        </footer>  
+        
     </body>
 </html>

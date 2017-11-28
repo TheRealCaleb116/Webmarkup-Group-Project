@@ -9,6 +9,7 @@
 nav{
     display: block;
     position: absolute;
+    float: left;
     width: 100%;
     left: 0px;
     
@@ -148,7 +149,12 @@ h2{
 
 /*End Of Footer Styles*/
 
+/*Misc Syles*/
 
+#spacer{
+    /*This offest everything below so that the menu dosn't go over it*/
+    margin-bottom: 40px;
+}
 
 @media all and (max-width: 480px){
     /*Mobile Navbar Styles*/
@@ -200,7 +206,7 @@ body{
     width: 80%;
     margin: 0px auto;
     max-width: 960px;
-    background-color: bisque;
+/*    background-color: bisque;*/
 }
 
 
