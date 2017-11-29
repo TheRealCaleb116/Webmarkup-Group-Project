@@ -97,6 +97,8 @@ nav li:active{
 footer{
     background-color: rgb(238, 238, 238);
     box-shadow:  0 -5px 15px -4px black;
+    bottom: 0px;
+    display: block;
 
 }
 #paneOne{
