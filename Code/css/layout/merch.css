@@ -1,0 +1,54 @@
+@charset utf-8;
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.item .extra {
+    display: none;
+}
+
+.item {
+    width: 25%;
+    padding: 10px;
+}
+
+.item:hover .extra {
+    display: flex;
+}
+
+.item img {
+    width: 100%;
+}
+
+.cost {
+    background-color: yellow;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 2px;
+    width: 33.33%;
+    text-align: center;
+}
+
+.buttons {
+    width: 66.66%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+}
+
+.buttons .btn {
+    width: 50%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.order {
+    background-color: red;
+}
+
+.info {
+    background-color: green;
+}
