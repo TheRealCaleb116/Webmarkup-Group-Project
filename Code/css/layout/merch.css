@@ -5,27 +5,8 @@
     flex-direction: row;
 }
 
-.item .extra {
-    display: none;
-}
-
-.item {
-    width: 25%;
-    padding: 10px;
-    padding-top: 36px;
-    border-radius: 25px;
-}
-
 .item .main img {
     border-radius: 25px;
-}
-
-.item:hover {
-    padding-top: 10px;
-}
-
-.item:hover .extra {
-    display: flex;
 }
 
 .item img {
@@ -61,4 +42,82 @@
 
 .info {
     background-color: green;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+}
+
+article.article h1 {
+    font-size: 3em;
+}
+
+article.article {
+    width: 66.67%;
+    border-radius: 20px;
+    background-color: aqua;
+    border-right: 3px solid black;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+article.article * {
+    padding: 5px 10px;
+    color: black;
+}
+
+aside {
+    width: 33.33%;
+    border-radius: 10px;
+    background-color: rgb(65, 244, 241);
+    padding: 5px;
+}
+
+@media only screen and (max-width: 480px) {
+    .item {
+        width: 100%;
+    }
+
+    .item .extra {
+        display: flex;
+    }
+
+    .row {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+    .item {
+        width: 25%;
+        border-radius: 15px;
+    }
+
+    .extra {
+        display: block;
+    }
+    
+    .buttons {
+        width: 100%;
+        margin-left: 0px;
+    }
+    
+    .cost {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+
+    .item {
+        width: 25%;
+        padding: 10px;
+        border-radius: 25px;
+    }
+
+    .extra {
+        display: flex;
+    }
 }
