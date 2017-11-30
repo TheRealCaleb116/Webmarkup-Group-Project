@@ -7,12 +7,24 @@ main{
 aside{
     width: 30%;
     float: left;
-    padding: 10px
-    
+    padding: 10px;
+    text-align: center;
+    font-family: "Days One";
 }
 aside ul li{
     list-style: none;
-    padding: 5px;
+    text-align:center;
+    background-color: rgb(248, 248, 248);
+    margin: 5px;
+    padding: 6px 0px;
+}
+aside ul li a{
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: dimgray;
+    font-family: "Days One";
+    font-size: 15px;
 }
 aside ul li:hover{
     background-color: darkcyan;
