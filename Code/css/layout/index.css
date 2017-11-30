@@ -1,0 +1,16 @@
+main{
+    width: 70%;
+    float: left;
+    border-right: solid;
+    padding: 10px;
+}
+aside{
+    width: 30%;
+    float: left;
+    padding: 10px
+    
+}
+aside ul li{
+    list-style: none;
+    padding: 5px;
+}
