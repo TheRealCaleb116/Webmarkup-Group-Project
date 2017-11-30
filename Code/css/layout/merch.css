@@ -12,6 +12,16 @@
 .item {
     width: 25%;
     padding: 10px;
+    padding-top: 40px;
+    border-radius: 25px;
+}
+
+.item .main img {
+    border-radius: 25px;
+}
+
+.item:hover {
+    padding-top: 10px;
 }
 
 .item:hover .extra {
