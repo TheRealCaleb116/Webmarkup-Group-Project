@@ -5,18 +5,27 @@ main{
     padding-bottom: 15px;
 }
 
+main::after{
+    clear: both;
+    content: "";
+    display: table;
+}
+
 
 /*==========================================*/
 /*=============Article Styles===============*/
 /*==========================================*/
 
-main article{
+ article{
     width: 70%;
     float: left;
     padding-right: 50px;
     padding-left: 15px;
 }
 
+article section{
+    padding: 10px;
+}
 
 
 
@@ -29,30 +38,45 @@ aside{
     width: 30%;
     float: left;
     border-left: border;
-    box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow:  -1px 0px 10px -2px rgba(0,0,0,0.75);
+    padding-right: 10px;
 }
 
 aside ul li{
-    padding-left: 20px;
+    padding: 5px;
+    padding-left: 25px;
+}
+
+aside ul{
+    padding-bottom: 10px;
 }
 
 aside h2{
-    text-align: center;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
 }
 
-
-/*Should Be Moved To Universal Styles Eventually*/
-h1{
+aside a{
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Days One";
+    font-size: 1.0em;
+    color: grey;
+}
+aside a:hover{
+    color: darkcyan;
+    
     
 }
-
 
 /*Mobile*/
 @media all and (max-width: 480px){
 
 }
 
-/*Reset*/
-main ul li{
+    
+main li{
     list-style: none;
 }
+    

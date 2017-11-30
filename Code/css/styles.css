@@ -27,11 +27,7 @@ h2{
     font-family: "Days One";
 }
 
-.fixContainer::after {
- clear: both;
- content: “”;
- display: table;
-}
+
 @media all and (max-width: 480px){
     
     body{
