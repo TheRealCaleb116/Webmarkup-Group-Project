@@ -1,9 +1,20 @@
 @charset utf-8;
 
+main{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+/*==========================================*/
+/*=============Article Styles===============*/
+/*==========================================*/
 
 main article{
     width: 70%;
     float: left;
+    padding-right: 50px;
+    padding-left: 15px;
 }
 
 
@@ -17,10 +28,16 @@ main article{
 aside{
     width: 30%;
     float: left;
+    border-left: border;
+    box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
 aside ul li{
     padding-left: 20px;
+}
+
+aside h2{
+    text-align: center;
 }
 
 
