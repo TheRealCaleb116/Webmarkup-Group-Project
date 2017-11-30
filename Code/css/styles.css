@@ -15,7 +15,17 @@ body{
     max-width: 960px;
 }
 
+h1{
+    font-size: 1.5em;
+    color: black;
+    font-family: "Days One";
+}
 
+h2{
+    font-size: 1.1em;
+    color: black;
+    font-family: "Days One";
+}
 
 @media all and (max-width: 480px){
     

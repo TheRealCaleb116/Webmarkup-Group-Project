@@ -1,1 +1,41 @@
 @charset utf-8;
+
+
+main article{
+    width: 70%;
+    float: left;
+}
+
+
+
+
+
+/*==========================================*/
+/*===============Aside Styles===============*/
+/*==========================================*/
+
+aside{
+    width: 30%;
+    float: left;
+}
+
+aside ul li{
+    padding-left: 20px;
+}
+
+
+/*Should Be Moved To Universal Styles Eventually*/
+h1{
+    
+}
+
+
+/*Mobile*/
+@media all and (max-width: 480px){
+
+}
+
+/*Reset*/
+main ul li{
+    list-style: none;
+}
