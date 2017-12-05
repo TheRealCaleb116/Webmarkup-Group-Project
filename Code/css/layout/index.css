@@ -4,6 +4,10 @@ main{
     border-right: solid;
     padding: 10px;
 }
+main img{
+    float: left;
+    max-width: 40%;
+}
 aside{
     width: 30%;
     float: left;
@@ -31,4 +35,7 @@ aside ul li a{
 
 aside ul li:hover{
     background-color: darkcyan;
+}
+aside img{
+    max-width: 100%;
 }
