@@ -56,6 +56,12 @@ nav a{
     font-size: 20px;
 }
 
+/*DON'T MIND ME JUST GONNA DO SOME STUFF -anthony */
+#current{
+    background-color: cadetblue;
+}
+/*Guess I selected whatever the current page is... neat*/
+
 
 /*Hover*/
 nav li:hover {
