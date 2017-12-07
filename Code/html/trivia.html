@@ -36,17 +36,19 @@
         </header>
         <main>
             <article>
-                <h1>HTML Trivia</h1>
-                <section id="aboutTrivia">
-                    <p>You know what shows the strongest dedication to html fandom. Trivia! Showcase your knowlege. How fast can you complete the trivia below? Post your best times on our non-existant forums!</p>
-                </section>
+                <div id="info">
+                    <h1>HTML Trivia</h1>
+                    <section id="aboutTrivia">
+                        <p>You know what shows the strongest dedication to html fandom. Trivia! Showcase your knowlege. How fast can you complete the trivia below? Post your best times on our non-existant forums!</p>
+                    </section>
+                </div>
                 <div>
                     <div id="controls">
-                        
-                        <div id="timer">
-                            <h2>(The Timer)</h2>
-                        </div>
+    
                         <form id="buttons">
+                            
+                            <h2 id="timer">(The Timer)</h2>
+                            
                             <input name="Start" id="Start" type="button" value="Start"/>
                             
                         </form>
@@ -54,51 +56,51 @@
                     </div>
                     
                     
-                    <section id="TriviaDefault">
+                    <section style="display: none" id="TriviaDefault">
                         
                     </section>
                     
-                    <section id="TriviaDone">
+                    <section style="display: none" id="TriviaDone">
                         
                     </section>   
                     
-                    <section id="TriviaGrade">
-                        
-                    </section>
-                    
-                    <section id="QuestionTemplate">
-                        <section id="question">
+                    <section class="question" id="q_1">
+                        <section id="qText">
                             <h2>
-                                Question (Num)
+                                Question One
                             </h2>
                             <p>
                                 This is the question about stuff and thigs. This is where text will go
                             </p>
                         </section>
                         <form id="q_1">
-                            <label for="a_1">Answer One</label>
-                            <input type="radio" name="Answers" id="a_1">                                
-                            <label for="a_2">Answer Two</label>
-                            <input type="radio" name="Answers" id="a_2">
-
-                            <label for="a_3">Answer Three</label>
-                            <input type="radio" name="Answers" id="a_3">                                
-                            <label for="a_4">Answer Four</label>
-                            <input type="radio" name="Answers" id="a_4">
                             
-                            <input type="button" name="next" id="next" value="Next>>">
+                            <fieldset>
+                                <label for="a_1">Answer One</label>
+                                <input type="radio" name="Answers" id="a_1"> 
+                            </fieldset> 
+                            
+                            <fieldset>
+                                <label for="a_2">Answer Two</label>
+                                <input type="radio" name="Answers" id="a_2">
+                            </fieldset>
+                            
+                            <fieldset>
+                                <label for="a_3">Answer Three</label>
+                                <input type="radio" name="Answers" id="a_3">
+                            </fieldset>
+                            
+                            <fieldset>
+                                <label for="a_4">Answer Four</label>
+                                <input type="radio" name="Answers" id="a_4">
+                            </fieldset>
+                            
+                            <input type="button" name="next" id="next" value="Next >>">
                         </form>
                     </section>
                     
                     
                 </div>
-                
-                
-                
-
-            
-            
-            
             </article>
             <aside>
                 <h2>Brush up on your Html Knowlege:</h2>

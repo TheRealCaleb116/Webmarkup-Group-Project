@@ -16,13 +16,16 @@ main::after{
 /*=============Article Styles===============*/
 /*==========================================*/
 
- article{
+ main article{
     width: 70%;
     float: left;
-    padding-right: 50px;
     padding-left: 15px;
 }
 
+#info{
+    padding-right: 50px;
+    
+}
 article section{
     padding: 10px;
 }
@@ -68,6 +71,56 @@ aside a:hover{
     color: darkcyan;
     
     
+}
+
+/*==========================================*/
+/*===============Trivia Styles===============*/
+/*==========================================*/
+#controls{
+    width: 100%;
+    padding-left: 10px;
+    display: block;
+    
+}
+#timer{
+    float: left;
+    padding: 0px 20px;
+}
+#Start{
+    padding: 3px 50px;
+}
+
+.question{
+    width: 100%;
+}
+
+
+#qText h2{
+    text-align: center;
+}
+
+#qText p{
+    text-align: center;
+    padding-left: 10px;
+}
+
+fieldset{
+    padding: 0px 0px;
+    margin: 0px 0px;
+    
+    border: none;
+    width: 50%;
+    display: block;
+    float: left;
+    
+    text-align: center;
+    
+    padding: 10px 0px;
+}
+
+#next{
+    clear: both;
+    float: right;
 }
 
 /*Mobile*/
