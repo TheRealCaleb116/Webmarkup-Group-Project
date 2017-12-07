@@ -15,8 +15,8 @@
 
 .item .main {
     text-align: center;
-    border: 2px solid black;
     border-radius: 25px;
+    background-color: aquamarine;
 }
 
 .item .extra .discription {
@@ -96,6 +96,11 @@ aside {
 .extra .discription .header {
     margin: 5px 0px;
     display: flex;
+}
+
+#arrow {
+    width: 100%;
+    text-align: right;
 }
 
 @media only screen and (max-width: 480px) {
