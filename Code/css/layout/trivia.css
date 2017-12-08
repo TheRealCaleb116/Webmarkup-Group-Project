@@ -92,14 +92,15 @@ aside a:hover{
 
 .question{
     width: 100%;
+    display: none;
 }
 
 
-#qText h2{
+.qText h2{
     text-align: center;
 }
 
-#qText p{
+.qText p{
     text-align: center;
     padding-left: 10px;
 }
@@ -118,7 +119,7 @@ fieldset{
     padding: 10px 0px;
 }
 
-#next{
+#next, #finish{
     clear: both;
     float: right;
 }

@@ -10,6 +10,8 @@
         
         <!--Individual Styles for this page-->
         <link href="../css/layout/trivia.css" rel="stylesheet"/>
+        <script src="../js/trivia.js"></script>
+        <script src="../js/jquery-3.2.1.min.js"></script>
         
         
         <!--Nav Bar And Footer Links-->
@@ -64,8 +66,10 @@
                         
                     </section>   
                     
+                    <!--Questions \/ -->
+                    
                     <section class="question" id="q_1">
-                        <section id="qText">
+                        <section class="qText">
                             <h2>
                                 Question One
                             </h2>
@@ -73,7 +77,7 @@
                                 This is the question about stuff and thigs. This is where text will go
                             </p>
                         </section>
-                        <form id="q_1">
+                        <form id="qForm_1">
                             
                             <fieldset>
                                 <label for="a_1">Answer One</label>
@@ -95,11 +99,117 @@
                                 <input type="radio" name="Answers" id="a_4">
                             </fieldset>
                             
-                            <input type="button" name="next" id="next" value="Next >>">
+                        </form>
+                    </section>
+                        
+                    <section class="question" id="q_2">
+                        <section class="qText">
+                            <h2>
+                                Question Two
+                            </h2>
+                            <p>
+                                Question Two text will go here in this spot right here so yeah......................
+                            </p>
+                        </section>
+                        <form id="qForm_2">
+                            
+                            <fieldset>
+                                <label for="a_1">Answer One</label>
+                                <input type="radio" name="Answers" id="a_1"> 
+                            </fieldset> 
+                            
+                            <fieldset>
+                                <label for="a_2">Answer Two</label>
+                                <input type="radio" name="Answers" id="a_2">
+                            </fieldset>
+                            
+                            <fieldset>
+                                <label for="a_3">Answer Three</label>
+                                <input type="radio" name="Answers" id="a_3">
+                            </fieldset>
+                            
+                            <fieldset>
+                                <label for="a_4">Answer Four</label>
+                                <input type="radio" name="Answers" id="a_4">
+                            </fieldset>
+                            
                         </form>
                     </section>
                     
+                    <section class="question" id="q_3">
+                        <section class="qText">
+                            <h2>
+                                Question Three
+                            </h2>
+                            <p>
+                                This is the question about stuff and thigs. This is where text will go
+                            </p>
+                        </section>
+                        <form id="qForm_3">
+                            
+                            <fieldset>
+                                <label for="a_1">Answer One</label>
+                                <input type="radio" name="Answers" id="a_1"> 
+                            </fieldset> 
+                            
+                            <fieldset>
+                                <label for="a_2">Answer Two</label>
+                                <input type="radio" name="Answers" id="a_2">
+                            </fieldset>
+                            
+                            <fieldset>
+                                <label for="a_3">Answer Three</label>
+                                <input type="radio" name="Answers" id="a_3">
+                            </fieldset>
+                            
+                            <fieldset>
+                                <label for="a_4">Answer Four</label>
+                                <input type="radio" name="Answers" id="a_4">
+                            </fieldset>
+                            
+                        </form>
+                    </section>
                     
+                    <section class="question" id="q_4">
+                        <section class="qText">
+                            <h2>
+                                Question Four
+                            </h2>
+                            <p>
+                                This is the question about stuff and thigs. This is where text will go
+                            </p>
+                        </section>
+                        <form id="qForm_4">
+                            
+                            <fieldset>
+                                <label for="a_1">Answer One</label>
+                                <input type="radio" name="Answers" id="a_1"> 
+                            </fieldset> 
+                            
+                            <fieldset>
+                                <label for="a_2">Answer Two</label>
+                                <input type="radio" name="Answers" id="a_2">
+                            </fieldset>
+                            
+                            <fieldset>
+                                <label for="a_3">Answer Three</label>
+                                <input type="radio" name="Answers" id="a_3">
+                            </fieldset>
+                            
+                            <fieldset>
+                                <label for="a_4">Answer Four</label>
+                                <input type="radio" name="Answers" id="a_4">
+                            </fieldset>
+                            
+                        </form>
+                    </section>
+                    
+                    <!--End Of Questions-->
+                    
+                    <section id="activeButtons">
+                        <input name="next" id="next" type="button" value="Next >>>" style="display: none">                        
+                        <input name="finish" id="finish" type="button" value="Finish" style="display: none">
+                    </section>
                 </div>
             </article>
             <aside>
