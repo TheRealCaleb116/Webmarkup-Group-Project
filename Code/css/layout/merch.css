@@ -13,6 +13,16 @@
     width: 100%;
 }
 
+.item .main {
+    text-align: center;
+    border-radius: 25px;
+    background-color: aquamarine;
+}
+
+.item .extra .discription {
+    width: 100%;
+}
+
 .cost {
     background-color: yellow;
     border: 2px solid black;
@@ -40,7 +50,7 @@
     background-color: red;
 }
 
-.info {
+.btn-info {
     background-color: green;
 }
 
@@ -74,6 +84,25 @@ aside {
     padding: 5px;
 }
 
+.extra .discription .info {
+    display: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: aqua;
+    margin-bottom: 5px;
+    padding: 2px;
+}
+
+.extra .discription .header {
+    margin: 5px 0px;
+    display: flex;
+}
+
+#arrow {
+    width: 100%;
+    text-align: right;
+}
+
 @media only screen and (max-width: 480px) {
     .item {
         width: 100%;
@@ -86,20 +115,20 @@ aside {
     .row {
         display: block;
     }
-    
+
     article.article {
         width: 100%;
     }
-    
+
     .text {
         display: block;
     }
-    
+
     aside {
         display: none;
     }
-    
-    
+
+
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
@@ -112,12 +141,12 @@ aside {
     .extra {
         display: block;
     }
-    
+
     .buttons {
         width: 100%;
         margin-left: 0px;
     }
-    
+
     .cost {
         width: 100%;
     }
@@ -131,7 +160,7 @@ aside {
         border-radius: 25px;
     }
 
-    .extra {
+    .extra .content {
         display: flex;
     }
 }
