@@ -23,9 +23,9 @@ window.addEventListener("load", function(){
 function startQuiz(){
     if(started == true){
         var checkedOptions = document.querySelectorAll('input[type="radio"]:checked');
-        
         for (var i=0; checkedOptions.length > i; i++){
-            console.log(checkedOptions[i])
+            /*console.log(checkedOptions[i]);*/
+            checkedOptions[i].checked = false;
             
         }
         
