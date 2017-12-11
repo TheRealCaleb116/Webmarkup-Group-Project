@@ -2,6 +2,9 @@
 var started = false;
 var currentQuestion = 4;
 
+var timer = 0;
+
+var TimerID;
 
 
 /*On Load*/
@@ -20,17 +23,32 @@ window.addEventListener("load", function(){
     }
 });
 
+//TIMER
+
+function startTimer(){
+    TimerID = setInterval("updateTimer()",1000);
+}
+function updateTimer(){
+    timer++;
+    //Update
+    document.getElementById("timer").innerHTML = timer + " Seconds.";
+    
+    
+}
+function stopTimer(){
+    clearInterval(TimerID);
+}
+
+//QUIZ
+
 function startQuiz(){
     if(started == true){
-        var checkedOptions = document.querySelectorAll('input[type="radio"]:checked');
-        for (var i=0; checkedOptions.length > i; i++){
-            /*console.log(checkedOptions[i]);*/
-            checkedOptions[i].checked = false;
-            
-        }
-        
-        
+        timer = 0;
+        document.getElementById("timer").innerHTML = "0 Seconds.";
+        ResetQuiz(); 
     }
+    
+    startTimer();
     
     started = true;
     document.getElementById("Start").setAttribute("disabled","disabled");
@@ -44,6 +62,42 @@ function startQuiz(){
     
 }
 
+function ResetQuiz(){
+    
+    
+    //Hide everything
+    document.getElementById("msgPerfect").style.display = "none";
+    document.getElementById("msgNotPerfect").style.display = "none";
+    
+    document.getElementById("TriviaGrade").style.display = "none";
+    document.getElementById("q_1").style.display = "none";    
+    document.getElementById("q_2").style.display = "none";    
+    document.getElementById("q_3").style.display = "none";    
+    document.getElementById("q_4").style.display = "none";
+    
+    
+    //Uncheck Options
+    var checkedOptions = document.querySelectorAll('input[type="radio"]:checked');
+    for (var i=0; checkedOptions.length > i; i++){
+        checkedOptions[i].checked = false;
+
+    }
+    document.getElementById("TriviaGrade").style.display = "none";
+    
+    //UnHighlight
+    for (x=0; x < 4; x++){
+        document.getElementById("c_" + (x+1)).parentElement.classList.remove("correctAnswer");   
+    }
+    
+    //Allow Read
+    var AllOptions = document.querySelectorAll('input[type="radio"]');
+    for (y=0; y < AllOptions.length; y++){
+        AllOptions[y].removeAttribute("disabled");
+    }
+    
+
+}
+
 function nextQuestion(){
     
     currentQuestion++;
@@ -52,6 +106,9 @@ function nextQuestion(){
 }
 
 function finishQuiz(){
+    /*Stop Timer*/
+    stopTimer();
+    
     /*Reset Buttons*/
     document.getElementById("Start").removeAttribute("disabled");
     document.getElementById("finish").style.display = "none";
@@ -66,7 +123,49 @@ function finishQuiz(){
 function gradeQuiz(){
     
     
+    //Vars
+    var qRight = 0;
+    
+    //Set Questions to Read Only
+    var AllOptions = document.querySelectorAll('input[type="radio"]');
+    for (y=0; y < AllOptions.length; y++){
+            AllOptions[y].setAttribute("disabled","disabled");
+
+    }
+    
+    //Count Correct Answers
+    var checkedOptions = document.querySelectorAll('input[type="radio"]:checked');
+    for (i=0; i < checkedOptions.length; i++){
+        if (checkedOptions[i].id == "c_1" || checkedOptions[i].id == "c_2" || checkedOptions[i].id == "c_3" || checkedOptions[i].id == "c_4"){
+            qRight++;
+        }
+    }
+    
+    //Highlight  Answers
+    for (x=0; x < 4; x++){
+        
+        document.getElementById("c_" + (x+1)).parentElement.classList.add("correctAnswer");   
+    }
+    
+    // Number msg
+    document.getElementById("numCorrect").innerHTML = "You got " + qRight + " out of the 4 correct, in " + timer + " seconds!";
+    
+    
+    //consalation msg
+    if(qRight == 4){
+        document.getElementById("msgPerfect").style.display = "block";
+    }else{
+        document.getElementById("msgNotPerfect").style.display = "block";
+    }
+    
+    document.getElementById("TriviaGrade").style.display = "block";
+    document.getElementById("q_1").style.display = "block";    
+    document.getElementById("q_2").style.display = "block";    
+    document.getElementById("q_3").style.display = "block";    
+    document.getElementById("q_4").style.display = "block";
+    
 }
+
 function optionClicked(){
     /*enable the next button*/
     if (currentQuestion == 4){

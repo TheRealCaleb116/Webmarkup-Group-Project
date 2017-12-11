@@ -46,11 +46,8 @@
                 </div>
                 <div>
                     <div id="controls">
-    
-                        <form id="buttons">
-                            
-                            <h2 id="timer">(The Timer)</h2>
-                            
+                        <h2 id="timer">0 Seconds</h2>
+                        <form id="buttons">                            
                             <input name="Start" id="Start" type="button" value="Start"/>
                             
                         </form>
@@ -62,7 +59,21 @@
                         
                     </section>
                     
-                    <section style="display: none" id="TriviaDone">
+                    <section style="display: none" id="TriviaGrade">
+                        <h2>
+                            Quiz Completed! 
+                            <div id="numCorrect">
+                                You got (n) out of 4 correct! 
+                            </div>
+                        </h2>
+                        
+                        <p style="display: none" id="msgPerfect" class="consolationMsg">
+                            Congradulations! You are a true master of html knowlege!
+                        </p>
+                        
+                        <p style="display: none" id="msgNotPerfect" class="consolationMsg">
+                            Bummer, well i guess the only thing to do is to try again!
+                        </p>
                         
                     </section>   
                     
@@ -74,28 +85,28 @@
                                 Question One
                             </h2>
                             <p>
-                                This is the question about stuff and thigs. This is where text will go
+                                In basic html what does the b tag do when it surounds normal text?
                             </p>
                         </section>
                         <form id="qForm_1">
                             
                             <fieldset>
-                                <label for="a_1">Answer One</label>
-                                <input type="radio" name="Answers" id="a_1"> 
+                                <label for="c_1">Makes the text Bold</label>
+                                <input type="radio" name="Answers" id="c_1"> 
                             </fieldset> 
                             
                             <fieldset>
-                                <label for="a_2">Answer Two</label>
+                                <label for="a_2">Makes the text Big</label>
                                 <input type="radio" name="Answers" id="a_2">
                             </fieldset>
                             
                             <fieldset>
-                                <label for="a_3">Answer Three</label>
+                                <label for="a_3">Makes the text blue</label>
                                 <input type="radio" name="Answers" id="a_3">
                             </fieldset>
                             
                             <fieldset>
-                                <label for="a_4">Answer Four</label>
+                                <label for="a_4">Breaks the text to a new line</label>
                                 <input type="radio" name="Answers" id="a_4">
                             </fieldset>
                             
@@ -108,28 +119,28 @@
                                 Question Two
                             </h2>
                             <p>
-                                Question Two text will go here in this spot right here so yeah......................
+                                Who invented HTML?
                             </p>
                         </section>
                         <form id="qForm_2">
                             
                             <fieldset>
-                                <label for="a_1">Answer One</label>
+                                <label for="a_1">Bill Gates</label>
                                 <input type="radio" name="Answers" id="a_1"> 
                             </fieldset> 
                             
                             <fieldset>
-                                <label for="a_2">Answer Two</label>
-                                <input type="radio" name="Answers" id="a_2">
+                                <label for="c_2">Tim Berners-Lee</label>
+                                <input type="radio" name="Answers" id="c_2">
                             </fieldset>
                             
                             <fieldset>
-                                <label for="a_3">Answer Three</label>
+                                <label for="a_3">Steve Jobs</label>
                                 <input type="radio" name="Answers" id="a_3">
                             </fieldset>
                             
                             <fieldset>
-                                <label for="a_4">Answer Four</label>
+                                <label for="a_4">Elon Musk</label>
                                 <input type="radio" name="Answers" id="a_4">
                             </fieldset>
                             
@@ -142,29 +153,29 @@
                                 Question Three
                             </h2>
                             <p>
-                                This is the question about stuff and thigs. This is where text will go
+                                If a tag has been replaced by another tag in a later version of HTML, what is it said to be?
                             </p>
                         </section>
                         <form id="qForm_3">
                             
                             <fieldset>
-                                <label for="a_1">Answer One</label>
+                                <label for="a_1">Dead</label>
                                 <input type="radio" name="Answers" id="a_1"> 
                             </fieldset> 
                             
                             <fieldset>
-                                <label for="a_2">Answer Two</label>
+                                <label for="a_2">Dilapetated</label>
                                 <input type="radio" name="Answers" id="a_2">
                             </fieldset>
                             
                             <fieldset>
-                                <label for="a_3">Answer Three</label>
+                                <label for="a_3">Defunct</label>
                                 <input type="radio" name="Answers" id="a_3">
                             </fieldset>
                             
                             <fieldset>
-                                <label for="a_4">Answer Four</label>
-                                <input type="radio" name="Answers" id="a_4">
+                                <label for="c_3">Deprecated</label>
+                                <input type="radio" name="Answers" id="c_3">
                             </fieldset>
                             
                         </form>
@@ -176,28 +187,28 @@
                                 Question Four
                             </h2>
                             <p>
-                                This is the question about stuff and thigs. This is where text will go
+                                What would you use to display multiple HTML doucment in one browser window?
                             </p>
                         </section>
                         <form id="qForm_4">
                             
                             <fieldset>
-                                <label for="a_1">Answer One</label>
+                                <label for="a_1">Maps</label>
                                 <input type="radio" name="Answers" id="a_1"> 
                             </fieldset> 
                             
                             <fieldset>
-                                <label for="a_2">Answer Two</label>
+                                <label for="a_2">Boxes</label>
                                 <input type="radio" name="Answers" id="a_2">
                             </fieldset>
                             
                             <fieldset>
-                                <label for="a_3">Answer Three</label>
-                                <input type="radio" name="Answers" id="a_3">
+                                <label for="c_4">Frames</label>
+                                <input type="radio" name="Answers" id="c_4">
                             </fieldset>
                             
                             <fieldset>
-                                <label for="a_4">Answer Four</label>
+                                <label for="a_4">Forms</label>
                                 <input type="radio" name="Answers" id="a_4">
                             </fieldset>
                             
