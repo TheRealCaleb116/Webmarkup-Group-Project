@@ -19,6 +19,9 @@ $(document).ready(function(){
                 discription = true;
             }
         });
+        $(".order").click(function(){
+            window.location = "orderForm.html?item=" + $(this).parent().parent().parent().parent().find(".main").find("p").html()
+        });
     }
     
 });
