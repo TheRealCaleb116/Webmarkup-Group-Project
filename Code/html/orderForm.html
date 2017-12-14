@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8"/>
-        <title>HTML fan page</title>
-        
-        <link href="../css/reset.css" rel="stylesheet">
-<!--        <link href="../css/bootstrap.css" rel="stylesheet"/>-->
-        <link href="../css/styles.css" rel="stylesheet"/>
-        
-        <!--Nav Bar And Footer Links-->
-        <link href="../css/Navbar.css" rel="stylesheet">
-        <script src="../js/navBar.js" defer></script>
-        
-    </head>
-    <body>
-        <header class="fix">
-            <img id="logo" src="../img/Logo.png" alt="Logo">
+    <meta charset="utf-8" />
+    <title>HTML fan page</title>
 
-            <nav id="navBar" >
-                <div id="navIcon">&#9776; Menu</div>
+    <link href="../css/reset.css" rel="stylesheet" />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
 
-                <ul id="drop" class="hide">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="trivia.html">Trivia</a></li>
-                    <li><a href="merch.html">Merchendise</a></li>
-                    <li id="current"><a href="orderForm.html">Order</a></li>
-                </ul>
-            </nav>
-            <div id="spacer"></div>
+    <!--Nav Bar And Footer Links-->
+    <link href="../css/Navbar.css" rel="stylesheet">
+    <script src="../js/navBar.js" defer></script>
 
-        </header>
-        <body>
-            <div class="container">
-                <form id="order" name="order" method="get" action="orderConfirm.html" class="form-horizontal">
-                    <div class="form-group">
-                        
-                        <label for="merch" class="col-sm-2 control-label">Product to order</label>
-                            <div class="col-sm-5">
-                                <select name="merch" id="merch">
+</head>
+
+<body>
+    <header class="fix">
+        <img id="logo" src="../img/Logo.png" alt="Logo">
+
+        <nav id="navBar">
+            <div id="navIcon">&#9776; Menu</div>
+
+            <ul id="drop">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trivia.html">Trivia</a></li>
+                <li><a href="merch.html">Merchendise</a></li>
+                <li id="current"><a href="orderForm.html">Order</a></li>
+            </ul>
+        </nav>
+        <div id="spacer"></div>
+
+    </header>
+    <div class="container">
+        <form id="order" name="order" method="get" action="orderConfirm.html" class="form-horizontal">
+            <div class="form-group">
+
+                <label for="merch" class="col-sm-2 control-label">Product to order</label>
+                <div class="col-sm-5">
+                    <select name="merch" id="merch">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -47,83 +47,76 @@
                                 <option>7</option>
                                 <option>8</option>
                                 </select>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="qty" class="col-sm-2 control-label">Quantity</label>
-                            <div class="col-sm-5">
-                            <input type="text" name="qty" id="qty" class="form-control"/>
-                        </div>
-                    </div>
-                    
-                    <hr/>
-                    
-                    <div class="form-group">
-                        <label for="price" class="col-sm-2 control-label">Subtotal</label>
-                            <div class="col-sm-5">
-                            <input type="text" name="price" id="price" readonly class="form-control"/>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="shipping" class="col-sm-2 control-label">Shipping</label>
-                            <div class="col-sm-5">
-                            <input type="text" name="shipping" id="shipping" readonly class="form-control"/>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="tax" class="col-sm-2 control-label">Tax</label>
-                            <div class="col-sm-5">
-                            <input type="text" name="tax" id="tax" readonly class="form-control"/>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="total" class="col-sm-2 control-label">Total</label>
-                            <div class="col-sm-5">
-                            <input type="text" name="total" id="total" readonly class="form-control"/>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <div class="col-sm-10 col-sm-offset-2">
-                            <button type="submit" class="btn">Submit Form</button>
-                        </div>
-                    </div>
-                    
-                </form>
+                </div>
             </div>
-        
-        
-        
-        
-        
-        
-        </body>
-        <footer>
-            <div id="paneOne">
-                 <section id="bottomNav">
-                    <h2>Navigation:</h2>
-                    <ul>
-                        <li><a href="#">Link One</a></li>
-                        <li><a href="#">Link Two</a></li>
-                        <li><a href="#">Link Three</a></li>
-                        <li><a href="#">Link Four</a></li>
-                        <li><a href="#">Link Five</a></li>
-                    </ul>
-                </section>
-                <section id="about">
-                    <h2>About Our Site:</h2>
-                    <article>
-                        Some strange thing about stuff and things. about the site and stuff like this and yeah. So basicly this is just random text as a placeholder 
-                    </article>
-                </section>
+
+            <div class="form-group">
+                <label for="qty" class="col-sm-2 control-label">Quantity</label>
+                <div class="col-sm-5">
+                    <input type="text" name="qty" id="qty" class="form-control" />
+                </div>
             </div>
-            <section id="paneTwo">
-               the best &diams; HTML FAN SITE &diams; every made
+
+            <hr/>
+
+            <div class="form-group">
+                <label for="price" class="col-sm-2 control-label">Subtotal</label>
+                <div class="col-sm-5">
+                    <input type="text" name="price" id="price" readonly class="form-control" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="shipping" class="col-sm-2 control-label">Shipping</label>
+                <div class="col-sm-5">
+                    <input type="text" name="shipping" id="shipping" readonly class="form-control" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="tax" class="col-sm-2 control-label">Tax</label>
+                <div class="col-sm-5">
+                    <input type="text" name="tax" id="tax" readonly class="form-control" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="total" class="col-sm-2 control-label">Total</label>
+                <div class="col-sm-5">
+                    <input type="text" name="total" id="total" readonly class="form-control" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <button type="submit" class="btn">Submit Form</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <footer>
+        <div id="paneOne">
+            <section id="bottomNav">
+                <h2>Navigation:</h2>
+                <ul>
+                    <li><a href="#">Link One</a></li>
+                    <li><a href="#">Link Two</a></li>
+                    <li><a href="#">Link Three</a></li>
+                    <li><a href="#">Link Four</a></li>
+                    <li><a href="#">Link Five</a></li>
+                </ul>
             </section>
-        </footer>  
-    </body>
+            <section id="about">
+                <h2>About Our Site:</h2>
+                <article>
+                    Some strange thing about stuff and things. about the site and stuff like this and yeah. So basicly this is just random text as a placeholder
+                </article>
+            </section>
+        </div>
+        <section id="paneTwo">
+            the best &diams; HTML FAN SITE &diams; every made
+        </section>
+    </footer>
+</body>
 </html>
