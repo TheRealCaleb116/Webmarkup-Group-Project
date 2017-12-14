@@ -74,6 +74,12 @@ function ResetQuiz(){
     document.getElementById("q_2").style.display = "none";    
     document.getElementById("q_3").style.display = "none";    
     document.getElementById("q_4").style.display = "none";
+    document.getElementById("q_5").style.display = "none";
+    document.getElementById("q_6").style.display = "none";
+    document.getElementById("q_7").style.display = "none";
+    document.getElementById("q_8").style.display = "none";
+    document.getElementById("q_9").style.display = "none";
+    document.getElementById("q_10").style.display = "none";
     
     
     //Uncheck Options
@@ -85,7 +91,7 @@ function ResetQuiz(){
     document.getElementById("TriviaGrade").style.display = "none";
     
     //UnHighlight
-    for (x=0; x < 4; x++){
+    for (x=0; x < 10; x++){
         document.getElementById("c_" + (x+1)).parentElement.classList.remove("correctAnswer");   
     }
     
@@ -136,23 +142,23 @@ function gradeQuiz(){
     //Count Correct Answers
     var checkedOptions = document.querySelectorAll('input[type="radio"]:checked');
     for (i=0; i < checkedOptions.length; i++){
-        if (checkedOptions[i].id == "c_1" || checkedOptions[i].id == "c_2" || checkedOptions[i].id == "c_3" || checkedOptions[i].id == "c_4"){
+        if (checkedOptions[i].id == "c_1" || checkedOptions[i].id == "c_2" || checkedOptions[i].id == "c_3" || checkedOptions[i].id == "c_4" || checkedOptions[i].id == "c_5" || checkedOptions[i].id == "c_6" || checkedOptions[i].id == "c_7" || checkedOptions[i].id == "c_8" || checkedOptions[i].id == "c_9" || checkedOptions[i].id == "c_10"){
             qRight++;
         }
     }
     
     //Highlight  Answers
-    for (x=0; x < 4; x++){
+    for (x=0; x < 10; x++){
         
         document.getElementById("c_" + (x+1)).parentElement.classList.add("correctAnswer");   
     }
     
     // Number msg
-    document.getElementById("numCorrect").innerHTML = "You got " + qRight + " out of the 4 correct, in " + timer + " seconds!";
+    document.getElementById("numCorrect").innerHTML = "You got " + qRight + " out of the 10 correct, in " + timer + " seconds!";
     
     
     //consalation msg
-    if(qRight == 4){
+    if(qRight == 10){
         document.getElementById("msgPerfect").style.display = "block";
     }else{
         document.getElementById("msgNotPerfect").style.display = "block";
@@ -163,12 +169,18 @@ function gradeQuiz(){
     document.getElementById("q_2").style.display = "block";    
     document.getElementById("q_3").style.display = "block";    
     document.getElementById("q_4").style.display = "block";
+    document.getElementById("q_5").style.display = "block";
+    document.getElementById("q_6").style.display = "block";
+    document.getElementById("q_7").style.display = "block";
+    document.getElementById("q_8").style.display = "block";
+    document.getElementById("q_9").style.display = "block";
+    document.getElementById("q_10").style.display = "block";
     
 }
 
 function optionClicked(){
     /*enable the next button*/
-    if (currentQuestion == 4){
+    if (currentQuestion == 10){
         document.getElementById("finish").removeAttribute("disabled");
     }else{   
         document.getElementById("next").removeAttribute("disabled");
@@ -177,7 +189,7 @@ function optionClicked(){
 
 function updateQuizDisplay(){
     /*disable the next button*/
-    if (currentQuestion == 4){
+    if (currentQuestion == 10){
         document.getElementById("finish").setAttribute("disabled","disabled");
     }else{
         document.getElementById("next").setAttribute("disabled","disabled");
@@ -189,7 +201,7 @@ function updateQuizDisplay(){
         document.getElementById("q_" + currentQuestion).style.display = "block";
     }else{
         /*If its the last question*/
-        if (currentQuestion == 4){
+        if (currentQuestion == 10){
             document.getElementById("next").style.display = "none";
             document.getElementById("finish").style.display = "block";
             
