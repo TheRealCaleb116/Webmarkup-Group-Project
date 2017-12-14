@@ -8,6 +8,8 @@
     <link href="../css/bootstrap.css" rel="stylesheet" />
     <link href="../css/styles.css" rel="stylesheet" />
 
+    <script src="../js/orderForm.js" defer></script>
+
     <!--Nav Bar And Footer Links-->
     <link href="../css/Navbar.css" rel="stylesheet">
     <script src="../js/navBar.js" defer></script>
@@ -38,14 +40,14 @@
                 <label for="merch" class="col-sm-2 control-label">Product to order</label>
                 <div class="col-sm-5">
                     <select name="merch" id="merch">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
+                                <option value="textbook1">textbook 1</option>
+                                <option value="textbook2">textbook 2</option>
+                                <option value="tshirt1">tshirt 1</option>
+                                <option value="tshirt2">tshirt 2</option>
+                                <option value="textbook3">textbook 3</option>
+                                <option value="black1">black</option>
+                                <option value="tshirt3">tshirt 3</option>
+                                <option value="black2">black</option>
                                 </select>
                 </div>
             </div>
@@ -56,6 +58,8 @@
                     <input type="text" name="qty" id="qty" class="form-control" />
                 </div>
             </div>
+            
+            <input class="hide" name="price" id="price" />
 
             <hr/>
 
@@ -96,27 +100,27 @@
         </form>
     </div>
     <footer>
-            <div id="paneOne">
-                 <section id="bottomNav">
-                    <h2>Navigation:</h2>
-                    <ul>
-                        <li><a href="index.html">&diams; Home</a></li>
-                        <li><a href="trivia.html">&diams; Trivia</a></li>
-                        <li><a href="merch.html">&diams; Merchandise</a></li>
-                        <li><a href="orderForm.html">&diams; Our Store</a></li>
+        <div id="paneOne">
+            <section id="bottomNav">
+                <h2>Navigation:</h2>
+                <ul>
+                    <li><a href="index.html">&diams; Home</a></li>
+                    <li><a href="trivia.html">&diams; Trivia</a></li>
+                    <li><a href="merch.html">&diams; Merchandise</a></li>
+                    <li><a href="orderForm.html">&diams; Our Store</a></li>
 
-                    </ul>
-                </section>
-                <section id="about">
-                    <h2>About Our Site:</h2>
-                    <article>
-                        We are a group of people who just love HTML. We love it to the point of making a pointless website where people like us can meet. Share your love of HTML!
-                    </article>
-                </section>
-            </div>
-            <section id="paneTwo">
-               the best &diams; HTML FAN SITE &diams; ever made
+                </ul>
             </section>
-        </footer>
+            <section id="about">
+                <h2>About Our Site:</h2>
+                <article>
+                    We are a group of people who just love HTML. We love it to the point of making a pointless website where people like us can meet. Share your love of HTML!
+                </article>
+            </section>
+        </div>
+        <section id="paneTwo">
+            the best &diams; HTML FAN SITE &diams; ever made
+        </section>
+    </footer>
 </body>
 </html>
