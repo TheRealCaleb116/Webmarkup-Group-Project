@@ -78,10 +78,10 @@ navIcon.onmousedown = function(){
     
     //Togle Dropdown Visiblity
     if (isOpen){
-        drop.classList.add("hide");
+        drop.classList.add("hideSmall");
         isOpen = false;
     }else{
-        drop.classList.remove("hide");
+        drop.classList.remove("hideSmall");
         isOpen = true;
     }
 }
