@@ -22,6 +22,6 @@ window.addEventListener("load", function(){
     document.getElementById("merch").onchange = function() {
         var index = this.selectedIndex;
         var inputText = this.children[index].innerHTML.trim();
-        window.alert(inputText);
+        var cost = costs[inputText];
     };
 });
