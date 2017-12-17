@@ -35,10 +35,10 @@
     </header>
     <main>
         <div class="well-lg">
-            <div class="col-sm-12 text-center">
-                <h1>*Possibly replace the "14.99" text boxes with a checkbox that hides the quantity until selected?*<br/>Products to Order</h1>
-            </div>
-            <form id="order" name="order" method="get" action="orderConfirm.html" class="form-horizontal">
+                <div class="col-sm-12 text-center">
+                    <h1>*Possibly replace the "14.99" text boxes with a checkbox that hides the quantity until selected?*<br/>Products to Order</h1>
+                </div>
+            <form id="order" name="order" method="get" class="form-horizontal" action="orderConfirm.html">
 
                 <div class="form-group">
                     <label for="textbook1" class="col-sm-2 control-label">Textbook 1</label>
@@ -48,7 +48,7 @@
                     <label for="tb1Qty" class="col-sm-2 control-label">Quantity</label>
                     <div class="col-sm-4">
                         <select name="tb1Qty" id="tb1Qty">
-                            <option value="0" selected>0</option>
+                            <option value="0" selected></option>
                             <option value="1">1</option>
                             <option value="1">2</option>
                             <option value="1">3</option>
@@ -71,7 +71,7 @@
                     <label for="tb2Qty" class="col-sm-2 control-label">Quantity</label>
                     <div class="col-sm-1">
                         <select name="tb2Qty" id="tb2Qty">
-                            <option value="0" selected>0</option>
+                            <option value="0" selected></option>
                             <option value="1">1</option>
                             <option value="1">2</option>
                             <option value="1">3</option>
@@ -94,7 +94,7 @@
                     <label for="tb3Qty" class="col-sm-2 control-label">Quantity</label>
                     <div class="col-sm-1">
                         <select name="tb3Qty" id="tb3Qty">
-                            <option value="0" selected>0</option>
+                            <option value="0" selected></option>
                             <option value="1">1</option>
                             <option value="1">2</option>
                             <option value="1">3</option>
@@ -117,7 +117,7 @@
                     <label for="tb4Qty" class="col-sm-2 control-label">Quantity</label>
                     <div class="col-sm-1">
                         <select name="tb4Qty" id="tb4Qty">
-                            <option value="0" selected>0</option>
+                            <option value="0" selected></option>
                             <option value="1">1</option>
                             <option value="1">2</option>
                             <option value="1">3</option>
@@ -140,7 +140,7 @@
                     <label for="ts1Qty" class="col-sm-2 control-label">Quantity</label>
                     <div class="col-sm-1">
                         <select name="ts1Qty" id="ts1Qty">
-                            <option value="0" selected>0</option>
+                            <option value="0" selected></option>
                             <option value="1">1</option>
                             <option value="1">2</option>
                             <option value="1">3</option>
@@ -163,7 +163,7 @@
                     <label for="ts2Qty" class="col-sm-2 control-label">Quantity</label>
                     <div class="col-sm-1">
                         <select name="ts2Qty" id="ts2Qty">
-                            <option value="0" selected>0</option>
+                            <option value="0" selected></option>
                             <option value="1">1</option>
                             <option value="1">2</option>
                             <option value="1">3</option>
@@ -187,7 +187,7 @@
                     <label for="ts3Qty" class="col-sm-2 control-label">Quantity</label>
                     <div class="col-sm-1">
                         <select name="ts3Qty" id="ts3Qty">
-                            <option value="0" selected>0</option>
+                            <option value="0" selected></option>
                             <option value="1">1</option>
                             <option value="1">2</option>
                             <option value="1">3</option>
@@ -210,7 +210,7 @@
                     <label for="ts4Qty" class="col-sm-2 control-label">Quantity</label>
                     <div class="col-sm-1">
                         <select name="ts4Qty" id="ts4Qty">
-                            <option value="0" selected>0</option>
+                            <option value="0" selected></option>
                             <option value="1">1</option>
                             <option value="1">2</option>
                             <option value="1">3</option>
@@ -231,28 +231,28 @@
                 <div class="form-group">
                     <label for="price" class="col-sm-2 control-label">Subtotal</label>
                     <div class="col-sm-5">
-                        <input type="text" name="price" id="price" readonly class="form-control" />
+                        <input type="text" name="price" id="price"  class="form-control" readonly/>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="shipping" class="col-sm-2 control-label">Shipping</label>
                     <div class="col-sm-5">
-                        <input type="text" name="shipping" id="shipping" readonly class="form-control" />
+                        <input type="text" name="shipping" id="shipping" class="form-control" readonly/>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="tax" class="col-sm-2 control-label">Tax</label>
                     <div class="col-sm-5">
-                        <input type="text" name="tax" id="tax" readonly class="form-control" />
+                        <input type="text" name="tax" id="tax" class="form-control" readonly/>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="total" class="col-sm-2 control-label">Total</label>
                     <div class="col-sm-5">
-                        <input type="text" name="total" id="total" readonly class="form-control" />
+                        <input type="text" name="total" id="total"  class="form-control" readonly/>
                     </div>
                 </div>
 
