@@ -16,10 +16,6 @@
     background-color: aquamarine;
 }
 
-.item .extra .discription {
-    width: 100%;
-}
-
 .cost {
     background-color: yellow;
     border: 2px solid black;
@@ -84,34 +80,14 @@ aside {
 .extra .discription .info {
     display: none;
     border: 2px solid black;
+    max-width: 200px;
     border-radius: 5px;
     background-color: aqua;
     margin-bottom: 5px;
     padding: 2px;
 }
 
-.extra .discription .header {
-    margin: 5px 0px;
-    display: flex;
-}
-
-#arrow {
-    width: 100%;
-    text-align: right;
-}
-
 @media only screen and (max-width: 480px) {
-    .item {
-        width: 100%;
-    }
-
-    .item .extra {
-        display: flex;
-    }
-
-    .row {
-        display: block;
-    }
 
     article.article {
         width: 100%;
@@ -120,9 +96,18 @@ aside {
     .text {
         display: block;
     }
+    
+    .buttons {
+        width: 100%;
+        margin-left: 0px;
+    }
 
     aside {
         display: none;
+    }
+    
+    .cost {
+        width: 100%;
     }
 
 
@@ -132,10 +117,6 @@ aside {
 
     .item {
         border-radius: 15px;
-    }
-
-    .extra {
-        display: block;
     }
 
     .buttons {
