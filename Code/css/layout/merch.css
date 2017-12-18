@@ -1,16 +1,13 @@
 @charset utf-8;
 
-.row {
+.items {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .item .main img {
     border-radius: 25px;
-}
-
-.item img {
-    width: 100%;
 }
 
 .item .main {
@@ -134,7 +131,6 @@ aside {
 @media only screen and (min-width: 481px) and (max-width: 768px) {
 
     .item {
-        width: 25%;
         border-radius: 15px;
     }
 
@@ -155,7 +151,6 @@ aside {
 @media only screen and (min-width: 769px) {
 
     .item {
-        width: 25%;
         padding: 10px;
         border-radius: 25px;
     }
