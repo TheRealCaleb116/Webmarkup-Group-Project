@@ -8,44 +8,54 @@ window.addEventListener("load", function(){
     document.forms.info.elements.tax.value = orderFields[37];
     document.forms.info.elements.shipping.value = orderFields[35];
     document.forms.info.elements.total.value = orderFields[39];
+    alert(formData = "at least this works");
     
 })
 
 window.addEventListener("load", function(){
-    document.getElementById("firstname").oninput = validateFName;
-    document.getElementById("lastname").oninput = validateLName;
+    document.getElementById("fName").oninput = validateFName;
+    document.getElementById("lName").oninput = validateLName;
     document.getElementById("add").oninput = validateAdd;
     document.getElementById("city").oninput = validateCity;
     document.getElementById("state").oninput = validateState;
     document.getElementById("zip").oninput = validateZip;
     document.getElementById("phone").oninput = validatePhone;
-    document.getElementById("bday").oninput = validateBDay;
-    document.getElementById("email").oninput = validateEMail;
+    document.getElementById("bDay").oninput = validateBDay;
+    document.getElementById("eMail").oninput = validateEMail;
     document.getElementById("subButton").onclick = runSubmit;
+    var test
+    alert(test = "so does this");
 })
 
 function validateFName() {
-    var fName = document.forms.mailing.elements.value;
-    if (fName.validity.valueMissing){
-        fName.setCustomValidity("Enter Your First Name");
+    var firstName = document.forms.mailing.elements.fName.value;
+    if (firstName.validity.valueMissing){
+        firstName.setCustomValidity("Enter Your First Name");
     } else {
         fName.setCustomValidity("");
+    }
 }
 function validateLName() {
     
 }
 function validateAdd() {
-   var add = document.forms.mailing.elements.value;
+   var add = document.getElementById("add");
     if (add.validity.valueMissing){
         add.setCustomValidity("Enter your address");
     } else {
         add.setCustomValidity("");
     }
+//    alert(add = "address");
 }
 function validateCity() {
-    
+    var City = document.getElementById("city");
+    if (City.validity.valueMissing) {
+        City.setCustomValidity("Enter a city");
+    } else {
+        City.setCustomValidity("");
+    }
 }
-function validateState() {
+function validateState() 
     
 }
 function validateZip() {
@@ -62,5 +72,13 @@ function validateEMail() {
 }
 
 function runSubmit() {
-    
+    validateFName();
+    validateLName();
+    validateAdd() ;
+    validateCity();
+    validateState();
+    validateZip() ;
+    validatePhone();
+    validateBDay();
+    validateEMail();
 }
