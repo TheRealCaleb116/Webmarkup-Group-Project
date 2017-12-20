@@ -5,11 +5,15 @@ window.addEventListener("load", function(){
     formData = formData.replace(/\+/g, " ");
     formData = decodeURIComponent(formData);
     var orderFields = formData.split(/[&=]/g);
+    var subtotal = orderFields[17];
+    var tax = orderFields[21];
+    var shipping = orderFields[19];
+    var total = orderFields[23];
     document.forms.info.elements.date.value = dateStr;
-    document.forms.info.elements.subtotal.value = orderFields[19];
-    document.forms.info.elements.tax.value = orderFields[23];
-    document.forms.info.elements.shipping.value = orderFields[21];
-    document.forms.info.elements.total.value = orderFields[25];
+    document.forms.info.elements.subtotal.value = formatUSCurrency(subtotal);
+    document.forms.info.elements.tax.value = formatUSCurrency(tax);
+    document.forms.info.elements.shipping.value = formatUSCurrency(shipping);
+    document.forms.info.elements.total.value = formatUSCurrency(total);
     
 })
 
@@ -134,4 +138,8 @@ function runSubmit() {
     validatePhone();
     validateBDay();
     validateEMail();
+}
+
+function formatUSCurrency(val){
+    return val.toLocaleString("en-US", { style: 'currency', currency: 'USD' });
 }
