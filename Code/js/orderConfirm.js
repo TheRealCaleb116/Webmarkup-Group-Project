@@ -50,12 +50,8 @@ function validateLName() {
 
 function validateAdd() {
     var add = document.getElementById("add");
-    var regex = /^\d+\s[A-z]+\s[A-z]+/g;
-    
     if (add.validity.valueMissing) {
         add.setCustomValidity("Enter your address");
-    } else if (regex.test(add.value) == false) {
-              add.setCustomValidity("Enter a valid Street Address");
     } else {
         add.setCustomValidity("");
     }
