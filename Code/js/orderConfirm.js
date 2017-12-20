@@ -1,13 +1,15 @@
 window.addEventListener("load", function(){
+    var currentDay = new Date();
+    var dateStr = currentDay.toLocaleDateString();
     var formData = location.search.slice(1);
     formData = formData.replace(/\+/g, " ");
     formData = decodeURIComponent(formData);
     var orderFields = formData.split(/[&=]/g);
-    document.forms.info.elements.date.value = "Today, who cares?"
-    document.forms.info.elements.subtotal.value = orderFields[33];
-    document.forms.info.elements.tax.value = orderFields[37];
-    document.forms.info.elements.shipping.value = orderFields[35];
-    document.forms.info.elements.total.value = orderFields[39];
+    document.forms.info.elements.date.value = dateStr;
+    document.forms.info.elements.subtotal.value = orderFields[19];
+    document.forms.info.elements.tax.value = orderFields[23];
+    document.forms.info.elements.shipping.value = orderFields[21];
+    document.forms.info.elements.total.value = orderFields[25];
     
 })
 
@@ -19,8 +21,8 @@ window.addEventListener("load", function(){
     document.getElementById("state").oninput = validateState;
     document.getElementById("zip").oninput = validateZip;
     document.getElementById("phone").oninput = validatePhone;
-    document.getElementById("bDay").oninput = validateBDay;
-    document.getElementById("eMail").oninput = validateEMail;
+//    document.getElementById("bDay").oninput = validateBDay;
+//    document.getElementById("eMail").oninput = validateEMail;
     document.getElementById("subButton").onclick = runSubmit;
 })
 
@@ -100,27 +102,27 @@ function validatePhone() {
         Phone.setCustomValidity("");
     }
 }
-function validateBDay() {
-    var BDay = document.getElementById("bDay");
-    var regex = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
-    
-    if (BDay.validity.valueMissing) {
-        BDay.setCustomValidity("Enter Your Birth Date");
-    } else if (regex.test(BDay.value) == false) {
-        BDay.setCustomValidity("Enter a valid Birth Date")      
-    } else {
-        BDay.setCustomValidity("");
-    }
-}
-function validateEMail() {
-        var EMail = document.getElementById("eMail");
-    
-    if (EMail.validity.valueMissing) {
-        EMail.setCustomValidity("Enter Your E-Mail");
-    } else {
-        EMail.setCustomValidity("");
-    }
-}
+//function validateBDay() {
+//    var BDay = document.getElementById("bDay");
+//    var regex = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+//    
+//    if (BDay.validity.valueMissing) {
+//        BDay.setCustomValidity("Enter Your Birth Date");
+//    } else if (regex.test(BDay.value) == false) {
+//        BDay.setCustomValidity("Enter a valid Birth Date")      
+//    } else {
+//        BDay.setCustomValidity("");
+//    }
+//}
+//function validateEMail() {
+//        var EMail = document.getElementById("eMail");
+//    
+//    if (EMail.validity.valueMissing) {
+//        EMail.setCustomValidity("Enter Your E-Mail");
+//    } else {
+//        EMail.setCustomValidity("");
+//    }
+//}
 
 function runSubmit() {
     validateFName();
