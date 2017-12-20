@@ -25,8 +25,6 @@ window.addEventListener("load", function(){
     document.getElementById("state").oninput = validateState;
     document.getElementById("zip").oninput = validateZip;
     document.getElementById("phone").oninput = validatePhone;
-//    document.getElementById("bDay").oninput = validateBDay;
-//    document.getElementById("eMail").oninput = validateEMail;
     document.getElementById("subButton").onclick = runSubmit;
 })
 
@@ -39,6 +37,7 @@ function validateFName() {
         fName.setCustomValidity("");
     }
 }
+
 function validateLName() {
     var lastName = document.getElementById("lName");
     
@@ -48,6 +47,7 @@ function validateLName() {
         lName.setCustomValidity("");
     }
 }
+
 function validateAdd() {
     var add = document.getElementById("add");
     var regex = /^\d+\s[A-z]+\s[A-z]+/g;
@@ -60,6 +60,7 @@ function validateAdd() {
         add.setCustomValidity("");
     }
 }
+
 function validateCity() {
     var City = document.getElementById("city");
     
@@ -69,6 +70,7 @@ function validateCity() {
         City.setCustomValidity("");
     }
 }
+
 function validateState() {
     var State = document.getElementById("state");
     var regex = /^([A-Z]{2})$/g;
@@ -82,6 +84,7 @@ function validateState() {
         State.setCustomValidity("");
     }
 }
+
 function validateZip() {
     var Zip = document.getElementById("zip");
     var regex = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
@@ -94,6 +97,7 @@ function validateZip() {
         Zip.setCustomValidity("");
     }
 }
+
 function validatePhone() {
     var Phone = document.getElementById("phone");
     var regex = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
@@ -106,27 +110,6 @@ function validatePhone() {
         Phone.setCustomValidity("");
     }
 }
-//function validateBDay() {
-//    var BDay = document.getElementById("bDay");
-//    var regex = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
-//    
-//    if (BDay.validity.valueMissing) {
-//        BDay.setCustomValidity("Enter Your Birth Date");
-//    } else if (regex.test(BDay.value) == false) {
-//        BDay.setCustomValidity("Enter a valid Birth Date")      
-//    } else {
-//        BDay.setCustomValidity("");
-//    }
-//}
-//function validateEMail() {
-//        var EMail = document.getElementById("eMail");
-//    
-//    if (EMail.validity.valueMissing) {
-//        EMail.setCustomValidity("Enter Your E-Mail");
-//    } else {
-//        EMail.setCustomValidity("");
-//    }
-//}
 
 function runSubmit() {
     validateFName();
@@ -141,13 +124,7 @@ function runSubmit() {
 }
 
 function formatUSCurrency(val){
-   
-//    return val.toFixed(2);
+    var num = val * 1;
     
-    var formatter = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD' , minimumFractionDigits: 2});
-    formatter.format(val);
-    return val;
-    
-    
-//    return val.toLocaleString("en-US", { style: 'currency', currency: 'USD' });
+    return num.toLocaleString("en-US", { style: 'currency', currency: 'USD' });
 }
