@@ -141,5 +141,13 @@ function runSubmit() {
 }
 
 function formatUSCurrency(val){
-    return val.toLocaleString("en-US", { style: 'currency', currency: 'USD' });
+   
+//    return val.toFixed(2);
+    
+    var formatter = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD' , minimumFractionDigits: 2});
+    formatter.format(val);
+    return val;
+    
+    
+//    return val.toLocaleString("en-US", { style: 'currency', currency: 'USD' });
 }
