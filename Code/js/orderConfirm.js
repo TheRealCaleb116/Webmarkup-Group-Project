@@ -1,6 +1,5 @@
 window.addEventListener("load", function(){
-    var currentDay = new Date();
-    var dateStr = currentDay.toLocaleDateString();
+    
     var formData = location.search.slice(1);
     formData = formData.replace(/\+/g, " ");
     formData = decodeURIComponent(formData);
@@ -9,10 +8,19 @@ window.addEventListener("load", function(){
     var tax = orderFields[21];
     var shipping = orderFields[19];
     var total = orderFields[23];
+    
+    var currentDay = new Date();
+    var dateStr = currentDay.toLocaleDateString();
+    
+    
     document.forms.info.elements.date.value = dateStr;
+    
     document.forms.info.elements.subtotal.value = formatUSCurrency(subtotal);
+    
     document.forms.info.elements.tax.value = formatUSCurrency(tax);
+    
     document.forms.info.elements.shipping.value = formatUSCurrency(shipping);
+    
     document.forms.info.elements.total.value = formatUSCurrency(total);
     
 })
@@ -69,7 +77,6 @@ function validateCity() {
 
 function validateState() {
     var State = document.getElementById("state");
-    var regex = /^([A-Z]{2})$/g;
     
     if (State.validity.valueMissing) {
         State.setCustomValidity("Enter Your State");
