@@ -1,0 +1,22 @@
+﻿Who Did What Sheet / Outline
+Division Of Work:
+
+
+NavBar/Footer/Header(the navbar/header and footer on every page) --- Caleb
+
+
+Home Page(index.html and all associated work) --- Anthony
+
+
+Trivia Page(trivia.html and all associated work) --- Caleb
+
+
+Merchandise Page(merch.html and all associated work) --- Ryan
+
+
+Order Page:
+* Html --- Anthony
+* Javascript --- Ryan
+Order Confirmation Page:
+* Html --- Anthony
+* Javascript ---Anthony
