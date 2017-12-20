@@ -149,7 +149,7 @@ function calc() {
         items += document.getElementById("ts4Qty").value*1;
     }
     
-    document.getElementById("price").value = subTotal;
+    document.getElementById("price").value = subTotal.toFixed(2);
     var shipping = 0;
     if (items >= 1 && items <= 5) {
         shipping = 5;
